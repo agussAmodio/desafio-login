@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./loginCss.css" />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(27deg, #34495e 50%, #2c3e50 50%);
+      }
+      .form-body {
+        width: 400px;
+        min-width: 300px;
+        border-radius: 10px;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        margin: 10px;
+      }
+      .form-body input {
+        display: block;
+        margin: auto;
+        height: 40px;
+        width: 75%;
+        padding-left: 10px;
+        border: 1px;
+      }
+      .form-body input[type="text"] {
+        margin-top: 20px;
+      }
+      ::placeholder {
+        font-size: 1rem;
+      }
+      .form-body input:hover {
+        transition: 0.5s;
+        border: 1px solid #2980b9;
+      }
+      .form-body button {
+        display: block;
+        margin: auto;
+        margin-top: 25px;
+        margin-bottom: 30px;
+        height: 40px;
+        width: 78%;
+      }
+      .text {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 25px;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="form-body">
+      <form method="post" action="/login" class="login-form">
+        <p class="text">Usuario</p>
+        <input
+          type="text"
+          name="usuario"
+          placeholder="Escribe tu usuario aqui"
+          required
+        />
+        <button type="submit">Conectarse</button>
+      </form>
+    </div>
+  </body>
+</html>

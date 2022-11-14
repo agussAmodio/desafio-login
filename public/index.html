@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background: linear-gradient(27deg, #34495e 50%, #2c3e50 50%);
+        color: #fff;
+      }
+      .align-middle {
+        color: #fff;
+      }
+    </style>
+    <title>DesafioMocks</title>
+  </head>
+
+  <body style="margin: 1rem">
+    <nav
+      style="display: flex; justify-content: space-evenly; margin-bottom: 1rem"
+    >
+      <h1 id="usuario"></h1>
+      <button onclick="logout()" type="submit">Cerrar Sesion</button>
+    </nav>
+    <hr />
+    <main id="mainContent">
+      <div class="container-lg">
+        <h2>LISTA DE PRODUCTOS</h2>
+        <div class="container-lg" id="productList"></div>
+      </div>
+
+      <div class="container-lg">
+        <h2 id="chatHeader">CHAT DE LA PAGINA</h2>
+        <form onsubmit="return addMessage(this)">
+          <div class="my-3">
+            <label for="email" class="form-label">Email</label>
+            <input
+              id="email"
+              class="form-control"
+              type="text"
+              name="email"
+              placeholder="Escribe tu email aqui"
+              required
+            />
+          </div>
+          <div class="my-3">
+            <label for="firstName" class="form-label">Nombre</label>
+            <input
+              id="firstName"
+              class="form-control"
+              type="text"
+              name="firstName"
+              placeholder="Escribe tu nombre aqui"
+              required
+            />
+          </div>
+          <div class="my-3">
+            <label for="lastName" class="form-label">Apellido</label>
+            <input
+              id="lastName"
+              class="form-control"
+              type="text"
+              name="lastName"
+              placeholder="Escribe tu apellido aqui"
+              required
+            />
+          </div>
+          <div class="my-3">
+            <label for="age" class="form-label">Edad</label>
+            <input
+              id="age"
+              class="form-control"
+              type="text"
+              name="age"
+              placeholder="Escribe tu edad aqui"
+              required
+            />
+          </div>
+          <div class="my-3">
+            <label for="alias" class="form-label">Alias</label>
+            <input
+              id="alias"
+              class="form-control"
+              type="text"
+              name="alias"
+              placeholder="Escribe tu alias aqui"
+              required
+            />
+          </div>
+          <img src="" alt="" />
+          <div class="my-3">
+            <label for="avatar" class="form-label">Avatar</label>
+            <input
+              id="avatar"
+              class="form-control"
+              type="url"
+              name="avatar"
+              placeholder="Escribe el link de la imagen de tu avatar aqui"
+              required
+            />
+          </div>
+          <div class="" id="chatBox"></div>
+          <div class="my-3">
+            <label for="message" class="form-label">Mensaje</label>
+            <input
+              id="message"
+              class="form-control"
+              type="text"
+              name="message"
+              placeholder="Escribe tu mensaje aqui"
+              required
+            />
+          </div>
+          <button class="btn btn-primary" type="submit">Enviar</button>
+        </form>
+      </div>
+    </main>
+    <!-- CDN para utilizar normalizr desde el FRONT -->
+    <script src="https://cdn.jsdelivr.net/npm/normalizr@3.6.1/dist/normalizr.browser.min.js
+    "></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
